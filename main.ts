@@ -1,3 +1,19 @@
-basic.forever(function () {
+input.onGesture(Gesture.Shake, function () {
 	
+})
+basic.forever(function () {
+    if (input.buttonIsPressed(Button.A)) {
+        basic.clearScreen()
+        basic.showString("t=")
+        basic.showNumber(input.temperature())
+        basic.showString("DEGRES")
+    } else {
+        basic.showLeds(`
+            . . # . .
+            . # . . .
+            # # # # #
+            . # . . .
+            . . # . .
+            `)
+    }
 })
